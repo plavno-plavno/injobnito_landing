@@ -1,0 +1,16 @@
+.TaglineItem {
+  width: max-content;
+  padding: 7px 16px;
+  border-radius: 32px;
+  border: 1px solid #85C553;
+  color: #2B163F;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 136%;
+  margin-bottom: 32px;
+  flex-shrink: 0;
+
+  @media (max-width: 800px) {
+    margin-bottom: 24px;
+  }
+}
