@@ -19,7 +19,6 @@ const Header = () => {
 				<a className={styles.Header_menu_link} href='#WhyInjobnitoBlock'>Why Injobnito</a>
 				<a className={styles.Header_menu_link} href='#TestimonialsBlock'>Testimonials</a>
 				<a className={styles.Header_menu_link} href='#FAQBlock'>FAQs</a>
-				<a className={styles.Header_menu_link} href='#ContactsBlock'>Contacts</a>
 				<Button variant="primary" iconLeft={<SignInIcon/>} onClick={() => {
 					return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
 				}}>Sign In</Button>
@@ -39,7 +38,6 @@ const Header = () => {
 					<a className={styles.Header_menu_link} href='#WhyInjobnitoBlock' onClick={toggleMenu}>Why Injobnito</a>
 					<a className={styles.Header_menu_link} href='#TestimonialsBlock' onClick={toggleMenu}>Testimonials</a>
 					<a className={styles.Header_menu_link} href='#FAQBlock' onClick={toggleMenu}>FAQs</a>
-					<a className={styles.Header_menu_link} href='#ContactsBlock' onClick={toggleMenu}>Contacts</a>
 					<Button variant="primary" iconLeft={<SignInIcon/>} onClick={() => {
 						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
 					}}>Sign In</Button>

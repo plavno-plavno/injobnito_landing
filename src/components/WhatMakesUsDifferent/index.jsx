@@ -10,7 +10,7 @@ import SettingsSearchIcon from "../../assets/iconComponents/SettingsSearchIcon";
 const WhatMakesUsDifferent = () => {
 	const [activeTab, setActiveTab] = useState('jobSeekers');
 	return (
-		<section className={styles.WhatMakesUsDifferent}>
+		<section className={styles.WhatMakesUsDifferent} id="WhatMakesUsDifferentBlock">
 			<div className={styles.WhatMakesUsDifferent_heading}>
 				<TaglineItem text="Features"/>
 				<div>

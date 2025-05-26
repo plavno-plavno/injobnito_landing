@@ -1,8 +1,12 @@
 import React from 'react';
 import WhiteLogo from '../../assets/images/white_logo.png';
+import { useGetPrivacyAndTerms } from "../../hooks/useGetPrivacyAndTerms";
 import styles from './index.module.scss';
 
 const Footer = () => {
+	
+	const { isLoading, error, getPrivacyAndTerms } = useGetPrivacyAndTerms();
+	
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.container}>
@@ -12,7 +16,7 @@ const Footer = () => {
 						<img src={WhiteLogo} alt={'WhiteLogo'}/>
 						<div className={styles.contactInfo}>
 							{/*<p>+123 456 789</p>*/}
-							<p>Hello@injobnito.com</p>
+							<a href="mailto:Hello@injobnito.com">Hello@injobnito.com</a>
 						</div>
 						<div className={styles.bottomSection}>
 							<div className={styles.copyright}>
@@ -23,20 +27,20 @@ const Footer = () => {
 					
 					<div className={styles.linksColumns}>
 						<div className={styles.linksColumn}>
-							<ul className={styles.linksList}>
-								<li>Terms of Use</li>
-								<li>Privacy Policy</li>
-							</ul>
+							<div className={styles.linksList}>
+								<a onClick={() => getPrivacyAndTerms('privacyPolicy')}>Terms of Use</a>
+								<a onClick={() => getPrivacyAndTerms('termsAndConditions')}>Privacy Policy</a>
+							</div>
 						</div>
 						
 						<div className={styles.linksColumn}>
-							<ul className={styles.linksList}>
-								<li>How it works</li>
-								<li>Why Injobnito?</li>
-								<li>Features</li>
-								<li>About</li>
-								<li>Testimonials</li>
-							</ul>
+							<div className={styles.linksList}>
+								<a href='#HowItWorksBlock'>How it works</a>
+								<a href='#WhyInjobnitoBlock'>Why Injobnito?</a>
+								<a href={"#WhatMakesUsDifferentBlock"}>Features</a>
+								<a href={"#AboutInjobnitoBlock"}>About</a>
+								<a href='#TestimonialsBlock'>Testimonials</a>
+							</div>
 						</div>
 					</div>
 				</div>

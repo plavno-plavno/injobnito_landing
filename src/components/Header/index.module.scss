@@ -1,12 +1,19 @@
 .Header {
   width: 100%;
-  height: 72px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 100px;
   border-bottom: 1px solid #D8DBE8;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 1024px) {
     padding: 16px 24px;
@@ -14,6 +21,7 @@
 
   &_menu {
     display: flex;
+    align-items: center;
 
     @media (max-width: 800px) {
       display: none;
@@ -26,6 +34,12 @@
       font-size: 14px;
       line-height: 136%;
       padding: 8px 16px;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #5D2F89;
+      }
 
       @media (max-width: 1024px) {
         padding: 8px;
@@ -127,8 +141,8 @@
 .menuContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
+  align-items: flex-start;
 
   > a {
     font-size: 18px;
@@ -138,18 +152,4 @@
     width: max-content;
     margin-top: 10px;
   }
-
-  // Пример стилей для контента
-  /*
-  a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 15px;
-    font-size: 18px;
-
-    &:hover {
-      color: #ccc;
-    }
-  }
-  */
 }
