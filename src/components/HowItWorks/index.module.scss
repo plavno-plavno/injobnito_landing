@@ -53,10 +53,11 @@
       padding: 48px;
       border: 1px solid #D8DBE8;
       position: sticky;
-      top: 35px;
+      top: 90px;
 
       @media (max-width: 640px) {
         padding: 32px;
+        position: static;
       }
 
       &:nth-child(1) {
@@ -65,10 +66,18 @@
 
       &:nth-child(2) {
         scale: 0.97;
+
+        @media (max-width: 640px) {
+          scale: 1;
+        }
       }
 
       &:nth-child(3) {
         scale: 0.94;
+
+        @media (max-width: 640px) {
+          scale: 1;
+        }
       }
     }
   }

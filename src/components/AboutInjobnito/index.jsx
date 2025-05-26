@@ -23,7 +23,7 @@ const aboutInjobnitoList = [
 
 const AboutInjobnito = () => {
 	return (
-		<section className={styles.AboutInjobnito}>
+		<section className={styles.AboutInjobnito} id="AboutInjobnitoBlock">
 			<div className={styles.AboutInjobnito_leftBlock}>
 				<div className={styles.AboutInjobnito_leftBlock_texts}>
 					<TaglineItem text="About Product"/>

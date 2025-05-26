@@ -55,7 +55,9 @@
   will-change: transform;
 
   &:hover {
-    animation-play-state: paused;
+    @media (min-width: 640px) {
+      animation-play-state: paused;
+    }
   }
 }
 
