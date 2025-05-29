@@ -121,7 +121,7 @@ const HowItWorks = () => {
 								<NotesIcon/>
 								<p className={styles.stepCounter}><span>01</span> / 03</p>
 								<div>
-									<h2 className={styles.stepTitle}>Post a role, focused on skills</h2>
+									<h2 className={styles.stepTitle}>Post a role focused on skills</h2>
 									<p className={styles.stepDescription}>
 										Highlight the capabilities you need—not just job titles. Our skill-first structure ensures better alignment from the start.
 									</p>

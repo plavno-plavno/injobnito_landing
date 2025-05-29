@@ -8,7 +8,7 @@ const ReadyToExperienceBlock = () => {
 		<section className={styles.ReadyToExperienceBlock}>
 			<div className={styles.ReadyToExperienceBlock_container}>
 				<div className={styles.ReadyToExperienceBlock_container_left}>
-					<h1>{'Ready to experience hiring, \n reimagined?'}</h1>
+					<h1>{'Ready to get started?'}</h1>
 					<p>Join Injobnito today - build your profile or post your first job.</p>
 					<div className={styles.ReadyToExperienceBlock_container_left_buttons}>
 						<Button variant="green" onClick={() => {

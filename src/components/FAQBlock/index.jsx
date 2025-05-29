@@ -2,8 +2,9 @@ import { useState } from "react";
 import TaglineItem from "../TaglineItem";
 import ArrowIcon from "../../assets/iconComponents/ArrowIcon";
 import styles from './index.module.scss';
+import RoleSwitch from "../RoleSwitch";
 
-const faqData = [{
+const faqJSData = [{
 	question: "How does Injobnito match me with jobs?",
 	answer: "Injobnito matches you with jobs based on your skills, experience, and job preferences such as location, salary range, and qualifications. Our smart matching algorithm analyzes your profile and compares it with job requirements to provide the best-fit opportunities—without revealing personal identifiers to employers."
 }, {
@@ -21,6 +22,26 @@ const faqData = [{
 }, {
 	question: "How can I improve my job matches on Injobnito?",
 	answer: "To improve your job matches, make sure your profile is fully completed with accurate job preferences, skills, and experience. Regularly update your job category, location preferences, and salary expectations to reflect your current goals. Engaging with job recommendations and applying to relevant roles also helps refine future matches."
+},];
+
+const faqEmplData = [{
+	question: "How does Injobnito match candidates to my job postings?",
+	answer: "Our AI recommends candidates who best align with your role based on skills, experience, and preferences. Matches are smart and targeted, not surface-level."
+}, {
+	question: "What information will I see about candidates?",
+	answer: "You'll see each candidate's qualifications, skill set, and experience level. Names and photos are hidden to keep decisions focused on merit."
+}, {
+	question: "Can I directly contact candidates through the platform?",
+	answer: "Yes. You can message candidates anonymously. Their identity remains private unless they choose to share it."
+}, {
+	question: "How is Injobnito different from LinkedIn or other job platforms?",
+	answer: "Injobnito is anonymous and skill-focused. We skip résumés, profile photos, and social connections, and focus on matching based on qualifications."
+}, {
+	question: "How does Injobnito reduce bias in hiring?",
+	answer: "We remove personal identifiers to help you evaluate candidates objectively. This promotes fairer and more inclusive hiring decisions."
+}, {
+	question: "How can I track my job postings and applications?",
+	answer: "Your dashboard gives you a clear view of matches and full control over applicant management."
 },];
 
 const FAQItem = ( { question, answer } ) => {
@@ -41,18 +62,33 @@ const FAQItem = ( { question, answer } ) => {
 };
 
 const FAQBlock = () => {
+	const [activeTab, setActiveTab] = useState('jobSeekers');
+	
 	return (<section className={styles.FAQBlock} id="FAQBlock">
 		<div className={styles.FAQBlock_heading}>
 			<TaglineItem text="FAQ"/>
-			<h1>{'Got questions? \n We’ve got answers.'}</h1>
+			<div>
+				<h1>{'Got questions? \n We’ve got answers.'}</h1>
+				<RoleSwitch
+					activeTab={activeTab}
+					onTabChange={setActiveTab}
+				/>
+			</div>
+		
 		</div>
-		<div className={styles.faqContainer}>
-			{faqData.map(( item, index ) => (<FAQItem
+		{activeTab === 'jobSeekers' ? <div className={styles.faqContainer}>
+			{faqJSData.map(( item, index ) => (<FAQItem
 				key={index}
 				question={item.question}
 				answer={item.answer}
 			/>))}
-		</div>
+		</div> : <div className={styles.faqContainer}>
+			{faqEmplData.map(( item, index ) => (<FAQItem
+				key={index}
+				question={item.question}
+				answer={item.answer}
+			/>))}
+		</div>}
 	</section>);
 };
 

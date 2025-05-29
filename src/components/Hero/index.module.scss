@@ -1,7 +1,23 @@
 .Hero {
   margin-top: 80px;
   text-align: center;
-  padding: 80px 20px;
+  padding: 128px 20px;
+  position: relative;
+  background: #fff;
+  z-index: -1;
+
+  /*&::after {
+    content: '';
+    position: absolute;
+    bottom: 200px;
+    left: -20px;
+    right: -20px;
+    height: 300px;
+    background: #2B163F;
+    filter: blur(300px);
+    z-index: -1;
+    opacity: 0.5;
+  }*/
 
   @media (max-width: 800px) {
     padding: 80px 16px;
@@ -12,6 +28,7 @@
     font-weight: 700;
     color: #2B163F;
     line-height: 118%;
+    white-space: pre-line;
 
     @media (max-width: 800px) {
       font-size: 40px;
@@ -25,6 +42,7 @@
 
     @media (max-width: 640px) {
       white-space: normal;
+      text-align: start;
     }
 
     @media (max-width: 370px) {
@@ -67,6 +85,7 @@
 
     @media (max-width: 640px) {
       white-space: normal;
+      text-align: start;
     }
   }
 
@@ -86,23 +105,29 @@
     margin-top: 64px;
     position: relative;
     display: inline-block;
+    /*position: inherit;*/
+    z-index: 10;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
-      bottom: 200px;
-      left: -20px;
-      right: -20px;
-      height: 300px;
-      background: #2B163F;
-      filter: blur(300px);
+      bottom: -60px;
+      left: 47px;
+      right: 0;
+      height: 600px;
+      background: #C8D2F9;
+      filter: blur(160px);
       z-index: -1;
-      opacity: 0.5;
+      opacity: 1;
+      rotate: -167deg;
     }
 
     &_desktop {
-      max-width: 100%;
+      width: 100%;
+      max-width: 930px;
       height: auto;
+      position: inherit;
+      /*z-index: 20;*/
 
       @media (max-width: 380px) {
         display: none;
