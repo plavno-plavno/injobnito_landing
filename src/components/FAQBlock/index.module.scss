@@ -35,6 +35,7 @@
 
         @media (max-width: 640px) {
           font-size: 32px;
+          margin-bottom: 32px;
         }
       }
     }
@@ -90,10 +91,12 @@
 .arrowIcon {
   transform: rotate(180deg);
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .arrowIconOpen {
   transform: rotate(0);
+  flex-shrink: 0;
 }
 
 

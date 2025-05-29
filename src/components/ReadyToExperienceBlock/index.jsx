@@ -19,7 +19,7 @@ const ReadyToExperienceBlock = () => {
 						}}>Start as an Employer</Button>
 					</div>
 				</div>
-				<img src={WelcomeImage} alt={'asd'} className={styles.ReadyToExperienceBlock_container_right}/>
+				{/*<img src={WelcomeImage} alt={'asd'} className={styles.ReadyToExperienceBlock_container_right}/>*/}
 			</div>
 		</section>
 	);
