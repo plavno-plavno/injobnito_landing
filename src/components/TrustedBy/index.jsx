@@ -7,7 +7,10 @@ import DoorDashIcon from "../../assets/iconComponents/DoorDashIcon";
 import JPMorganIcon from "../../assets/iconComponents/JPMorganIcon";
 import StarbucksIcon from "../../assets/iconComponents/StarbucksIcon";
 import SalesforceIcon from "../../assets/iconComponents/SalesforceIcon";
+import AmazonIcon from "../../assets/iconComponents/AmazonIcon";
 import styles from './index.module.scss';
+import KpmgIcon from "../../assets/iconComponents/KpmgIcon";
+import RivianIcon from "../../assets/iconComponents/RivianIcon";
 
 const TrustedBy = () => {
 	const companies = [
@@ -17,11 +20,18 @@ const TrustedBy = () => {
 		{ icon: <ATTIcon className={styles.icon} />, name: 'AT&T' },
 		{ icon: <DoorDashIcon className={styles.icon} />, name: 'DoorDash' },
 		{ icon: <JPMorganIcon className={styles.icon} />, name: 'J.P.Morgan' },
+	];
+	
+	const companiesSecondLine = [
 		{ icon: <StarbucksIcon className={styles.icon} />, name: 'Starbucks' },
 		{ icon: <SalesforceIcon className={styles.icon} />, name: 'Salesforce' },
+		{ icon: <AmazonIcon className={styles.icon} />, name: 'Amazon' },
+		{ icon: <KpmgIcon className={styles.icon} />, name: 'Kpmg' },
+		{ icon: <RivianIcon className={styles.icon} />, name: 'Rivian' },
 	];
 	
 	const doubleCompanies = [...companies, ...companies];
+	const doubleCompaniesSecondLine = [...companiesSecondLine, ...companiesSecondLine];
 	
 	return (
 		<section className={styles.TrustedBy}>
@@ -38,7 +48,16 @@ const TrustedBy = () => {
 							className={styles.companyItem}
 						>
 							{company.icon}
-							{/*<span className="visually-hidden">{company.name}</span>*/}
+						</div>
+					))}
+				</div>
+				<div className={styles.marqueeTrack}>
+					{doubleCompaniesSecondLine.map((company, index) => (
+						<div
+							key={`${company.name}-${index}`}
+							className={styles.companyItem}
+						>
+							{company.icon}
 						</div>
 					))}
 				</div>

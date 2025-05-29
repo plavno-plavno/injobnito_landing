@@ -1,17 +1,18 @@
 import styles from './index.module.scss';
 import Button from '../Button';
 import heroImage from '../../assets/images/heroImage.png';
+import heroImageX1 from '../../assets/images/heroImageX1.png';
+import heroImageAI from '../../assets/images/heroImage.jpg';
 import heroMobile from '../../assets/images/hero_mobile.png';
 
 const Hero = () => {
 	return (
 		<section className={styles.Hero}>
 			<h1>
-				A <span className={styles.highlight}>smarter</span> way to connect <br/>
-				the right talent to the right opportunity
+				{'The hiring platform for people who \n hate hiring platforms'}
 			</h1>
 			<p>
-				{'An incognito hiring experience that removes personal details, helps job \n seekers get noticed for what they can do, and gives employers a faster \n way to find top-fit talent.'}
+				{'Injobnito is an anonymous, skill-first hiring platform that connects talent to opportunity without the usual hiring headaches'}
 			</p>
 			<div className={styles.buttonGroup}>
 				<Button variant="primary" onClick={() => {

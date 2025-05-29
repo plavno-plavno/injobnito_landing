@@ -24,17 +24,6 @@ const WhatMakesUsDifferent = () => {
 			{activeTab === 'jobSeekers' ? <div className={styles.WhatMakesUsDifferent_cards}>
 				<div className={styles.WhatMakesUsDifferent_cards_item}>
 					<div className={styles.iconContainer}>
-						<MagicIcon/>
-						<span className={styles.comingSoon}>Coming soon</span>
-					</div>
-					<h3>{`Smarter matches \n with AI insights`}</h3>
-					<p>
-						Our AI matches your skills, experience, and potential with roles that fit your strengths, while giving
-						recruiters skills-based insights to showcase why you’re the perfect fit.
-					</p>
-				</div>
-				<div className={styles.WhatMakesUsDifferent_cards_item}>
-					<div className={styles.iconContainer}>
 						<DetectiveIcon/>
 					</div>
 					<h3>A wider net of opportunities</h3>
@@ -42,6 +31,17 @@ const WhatMakesUsDifferent = () => {
 						Unlock opportunities you might have missed on traditional job boards. Our incognito profiles ensure
 						recruiters focus on your skills—not personal details—reducing unconscious bias and expanding your career
 						possibilities.
+					</p>
+				</div>
+				<div className={styles.WhatMakesUsDifferent_cards_item}>
+					<div className={styles.iconContainer}>
+						<MagicIcon/>
+						<span className={styles.comingSoon}>Coming soon</span>
+					</div>
+					<h3>{`Smarter matches \n with AI insights`}</h3>
+					<p>
+						Our AI matches your skills, experience, and potential with roles that fit your strengths, while giving
+						recruiters skills-based insights to showcase why you’re the perfect fit.
 					</p>
 				</div>
 				<div className={styles.WhatMakesUsDifferent_cards_item}>
@@ -55,6 +55,16 @@ const WhatMakesUsDifferent = () => {
 					</p>
 				</div>
 			</div> : <div className={styles.WhatMakesUsDifferent_cards}>
+				<div className={styles.WhatMakesUsDifferent_cards_item}>
+					<div className={styles.iconContainer}>
+						<SettingsSearchIcon/>
+					</div>
+					<h3>Hire smarter, retain longer</h3>
+					<p>
+						Skills-first hiring leads to better alignment, stronger engagement, and up to 9% higher retention—from day
+						one.
+					</p>
+				</div>
 				<div className={styles.WhatMakesUsDifferent_cards_item}>
 					<div className={styles.iconContainer}>
 						<MagicIcon/>
@@ -75,16 +85,6 @@ const WhatMakesUsDifferent = () => {
 					<p>
 						Our AI Talent Scout finds skilled, overlooked candidates that traditional systems miss—expanding your
 						pipeline and helping you hire faster.
-					</p>
-				</div>
-				<div className={styles.WhatMakesUsDifferent_cards_item}>
-					<div className={styles.iconContainer}>
-						<SettingsSearchIcon/>
-					</div>
-					<h3>Hire smarter, retain longer</h3>
-					<p>
-						Skills-first hiring leads to better alignment, stronger engagement, and up to 9% higher retention—from day
-						one.
 					</p>
 				</div>
 			</div>}

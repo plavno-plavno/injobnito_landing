@@ -54,12 +54,12 @@
     .marqueeTrack {
       display: flex;
       width: max-content;
-      animation: marquee 15s linear infinite;
+      animation: marquee 30s linear infinite;
       will-change: transform;
 
-      &:hover {
+     /* &:hover {
         animation-play-state: paused;
-      }
+      }*/
     }
 
     .companyItem {

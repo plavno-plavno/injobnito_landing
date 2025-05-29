@@ -38,10 +38,10 @@ const WorkSmarterBlock = () => {
 	
 	return (
 		<section className={styles.WorkSmarterBlock}>
-			<img src={HandLike} alt={'up finger like'} />
+			{/*<img src={HandLike} alt={'up finger like'} />*/}
 			<div className={styles.WorkSmarterBlock_heading}>
 				<TaglineItem text="Numbers" color={'#fff'}/>
-				<h1>{'The Data Is Clear: \n Hiring Needs to Work Smarter'}</h1>
+				<h1>{'The data is clear: \n Hiring needs to work smarter'}</h1>
 				<p>Today's hiring systems waste time, overlook qualified talent, and miss the mark on performance.</p>
 			</div>
 			<div ref={ref} className={styles.statsBlock}>

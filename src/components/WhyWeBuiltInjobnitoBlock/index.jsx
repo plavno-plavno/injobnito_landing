@@ -9,7 +9,7 @@ const WhyWeBuiltInjobnitoBlock = () => {
 				<div className={styles.WhyWeBuiltInjobnitoBlock_leftBlock}>
 					<div className={styles.WhyWeBuiltInjobnitoBlock_leftBlock_texts}>
 						<TaglineItem text="Mission"/>
-						<h1>Why We Built Injobnito</h1>
+						<h1>Why we built Injobnito</h1>
 						<div className={styles.WhyWeBuiltInjobnitoBlock_leftBlock_list}>
 							<p>We believe great talent should be recognized for what truly matters—skills, experience, and potential.
 								That’s why we built Injobnito: a new kind of hiring platform that connects people and opportunities
