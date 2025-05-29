@@ -68,20 +68,24 @@
 
   &_rightBlock {
     width: 50%;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex: 1 0;
 
     @media (max-width: 1024px) {
       width: 100%;
     }
 
     .stepImage {
-      max-width: 100%;
+      width: 100%;
+      max-width: 600px;
       max-height: 100%;
       object-fit: contain;
       border-radius: 16px;
+      border: 1px solid;
+      border-image-source: linear-gradient(243.18deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0 0 64px -12px #8D7EE87A;
 
       @media (max-width: 1024px) {
         width: 70%;
