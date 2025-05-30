@@ -46,7 +46,7 @@ jobs:
         with:
           cmd: build
         env:
-          ci: false
+          CI: false
 
       - name: rsync deployments (sync files)
         uses: burnett01/rsync-deployments@6.0.0
