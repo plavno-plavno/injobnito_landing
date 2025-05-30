@@ -1,0 +1,60 @@
+name: novaProd
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: _MAIN_ENVIRONMENT_ - Checkout Source Code
+        uses: actions/checkout@v3
+
+      - name: Set Node.js 20.9.0
+        uses: actions/setup-node@v3
+        id: setup-node
+        with:
+          node-version: 20.9.0
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-${{steps.setup-node.outputs.node-version}}
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        with:
+          cmd: install
+
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
+          directory: .
+          file_name: .env
+          fail_on_empty: false
+          sort_keys: false
+
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+        env:
+          CI: false
+
+      - name: rsync deployments (sync files)
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete --exclude='node_modules/' --exclude='.git' --exclude='.github' --exclude='.idea' --exclude='src/' --exclude='public/' --exclude='tsconfig.json' --exclude='package*.json' --exclude='yarn.lock'
+          path: build/
+          remote_path: ${{secrets.PROD_REMOTE_PATH}}
+          remote_host: ${{secrets.PROD_HOST}}
+          remote_user: ${{secrets.PROD_USERNAME}}
+          remote_key: ${{secrets.PROD_KEY}}
+
