@@ -39,10 +39,10 @@ const WhyWeBuiltInjobnitoBlock = () => {
 				</div>
 				<div className={styles.WhyWeBuiltInjobnitoBlock_takeNextStep_buttons}>
 					<Button variant="primary" onClick={() => {
-						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+						return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 					}}>Find Work</Button>
 					<Button variant="outlined" style={{ background: 'transparent', flexShrink: 0 }} onClick={() => {
-						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+						return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 					}}>Start Hiring</Button>
 				</div>
 			</div>

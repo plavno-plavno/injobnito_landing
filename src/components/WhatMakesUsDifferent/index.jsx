@@ -96,10 +96,10 @@ const WhatMakesUsDifferent = () => {
 				</div>
 				<div className={styles.WhatMakesUsDifferent_takeNextStep_buttons}>
 					<Button variant="primary" onClick={() => {
-						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+						return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 					}}>Get started</Button>
 					<Button variant="outlined" style={{ background: 'transparent' }} onClick={() => {
-						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+						return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 					}}>Start Hiring</Button>
 				</div>
 			</div>

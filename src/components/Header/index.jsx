@@ -20,7 +20,7 @@ const Header = () => {
 				<a className={styles.Header_menu_link} href='#TestimonialsBlock'>Testimonials</a>
 				<a className={styles.Header_menu_link} href='#FAQBlock'>FAQs</a>
 				<Button variant="primary" iconLeft={<SignInIcon/>} onClick={() => {
-					return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+					return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 				}}>Sign In</Button>
 			</nav>
 			<button
@@ -39,7 +39,7 @@ const Header = () => {
 					<a className={styles.Header_menu_link} href='#TestimonialsBlock' onClick={toggleMenu}>Testimonials</a>
 					<a className={styles.Header_menu_link} href='#FAQBlock' onClick={toggleMenu}>FAQs</a>
 					<Button variant="primary" iconLeft={<SignInIcon/>} onClick={() => {
-						return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+						return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 					}}>Sign In</Button>
 				</nav>
 			</div>

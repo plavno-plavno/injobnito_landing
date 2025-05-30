@@ -16,10 +16,10 @@ const Hero = () => {
 			</p>
 			<div className={styles.buttonGroup}>
 				<Button variant="primary" onClick={() => {
-					return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+					return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 				}}>Find Jobs</Button>
 				<Button variant="outlined" onClick={() => {
-					return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+					return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 				}}>Hire Talent</Button>
 			</div>
 			<div className={styles.image}>

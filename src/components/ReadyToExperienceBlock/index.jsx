@@ -12,10 +12,10 @@ const ReadyToExperienceBlock = () => {
 					<p>Join Injobnito today - build your profile or post your first job.</p>
 					<div className={styles.ReadyToExperienceBlock_container_left_buttons}>
 						<Button variant="green" onClick={() => {
-							return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+							return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 						}}>Start as a Job Seeker</Button>
 						<Button variant="outlinedWhite" onClick={() => {
-							return window.location.href = 'https://fe-injobnito.vercel.app/auth/onboarding';
+							return window.location.href = 'https://app.injobnito.com/auth/onboarding';
 						}}>Start as an Employer</Button>
 					</div>
 				</div>
