@@ -9,7 +9,7 @@ export const useGetPrivacyAndTerms = () => {
 		setError(null);
 		
 		try {
-			const response = await fetch('https://injobnito.plavno.app:8080/api/v1/media/documents');
+			const response = await fetch('https://backend.injobnito.com/api/v1/media/documents');
 			
 			if (!response.ok) {
 				throw new Error(`HTTP error! status: ${response.status}`);
